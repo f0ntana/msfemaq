@@ -66,15 +66,13 @@ a { color: inherit; }
 .foot a { font-weight: 700; text-decoration: none; color: var(--ink); }
 
 .logo-lockup {
-  margin: 0 0 1rem;
-  background: #0d0d0d;
-  border-radius: 18px;
-  padding: 0.35rem 0.35rem 0.55rem;
+  margin: 0 0 1.15rem;
 }
 
 .logo-lockup img {
-  width: 100%;
+  width: min(100%, 440px);
   height: auto;
+  margin: 0 auto;
 }
 
 .tagline {
@@ -232,26 +230,30 @@ dd {
 
   .panel {
     display: grid;
-    grid-template-columns: 230px minmax(16rem, 1fr) minmax(280px, 360px);
+    grid-template-columns: minmax(280px, 360px) minmax(16rem, 1fr) minmax(280px, 360px);
     grid-template-areas:
       "logo intro nav"
       "logo intro links";
     gap: 0.85rem 2.5rem;
     align-items: center;
-    background: #0d0d0d;
-    color: #fff;
-    padding: 1.35rem max(1.5rem, calc((100% - 1120px) / 2)) 1.6rem;
+    background: #fff;
+    color: var(--ink);
+    border-bottom: 1px solid var(--line);
+    padding: 1.15rem max(1.5rem, calc((100% - 1120px) / 2));
   }
 
   .profile { display: contents; text-align: left; }
 
   .logo-lockup {
     grid-area: logo;
-    width: 230px;
+    width: 100%;
     margin: 0;
-    padding: 0;
-    background: transparent;
-    border-radius: 0;
+  }
+
+  .logo-lockup img {
+    width: 100%;
+    max-width: none;
+    margin: 0;
   }
 
   .intro { grid-area: intro; }
@@ -259,7 +261,7 @@ dd {
   .tagline {
     margin: 0 0 0.7rem;
     max-width: 28rem;
-    color: #f4f4f4;
+    color: var(--ink);
     text-align: left;
     font-size: 1.7rem;
     font-weight: 600;
@@ -268,9 +270,9 @@ dd {
 
   .meta { margin: 0; align-items: flex-start; }
 
-  .meta a { color: #fff; font-size: 1.55rem; }
+  .meta a { color: var(--ink); font-size: 1.55rem; }
 
-  .meta span { color: #c4c4c4; }
+  .meta span { color: var(--muted); }
 
   .site-nav {
     grid-area: nav;
@@ -280,12 +282,12 @@ dd {
   }
 
   .site-nav a {
-    color: #fff;
+    color: var(--ink);
     font-weight: 600;
     text-decoration: none;
   }
 
-  .site-nav a:hover { color: #ffb4b8; }
+  .site-nav a:hover { color: var(--red-dark); }
 
   .links {
     grid-area: links;
