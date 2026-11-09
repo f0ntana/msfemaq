@@ -305,6 +305,8 @@ dd {
     margin: 0;
   }
 
+  .links .link:last-child { grid-column: 1 / -1; }
+
   .detail {
     width: min(1120px, calc(100% - 3rem));
     margin: 0 auto;
