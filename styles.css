@@ -313,7 +313,7 @@ dd {
 
   .place {
     display: grid;
-    grid-template-columns: 280px minmax(0, 1fr);
+    grid-template-columns: 340px minmax(0, 1fr);
     gap: 0.4rem 2rem;
     align-items: start;
     margin-top: 0;
